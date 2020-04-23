@@ -1,19 +1,15 @@
 def suma(a, b) :
-    resultado = a + b
-    return resultado
-
+    return(a + b)
+    
 def resta(a, b) :
-    resultado = a - b
-    return resultado
-
+    return(a - b)
+    
 def multiplicacion(a, b) :
-    resultado = a * b
-    return resultado
-
+    return(a * b)
+    
 def division(a, b) :
     if (b == 0) :
-        # Hacer algo
-        print("Error!")
+        print("Error! División entre cero.")
     else :
         resultado = a / b
         return resultado
