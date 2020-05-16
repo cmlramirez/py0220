@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PY0220 - Registro de personas en DB</title>
+    <style>
+        p, button {font-family:Tahoma;font-size: 10pt}
+    </style>
+
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                {% if registration is defined %}
+                    <p>Registro exitoso, gracias.</p>
+                    <hr>
+                {% endif %}
+                <p>Bienvenidos a la página para registrarse en una Base de Datos.</p>
+                <p>Actualmente tenemos {{ num_count }} personas registradas.</p>
+                <p>Haga click en el botón de abajo si desea registrar otra persona.</p>
+                <a href="/signup"><button>Registrar</button></a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
