@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block title %}Consulta de cantones{% endblock %}
+{% block content %}
+    <table cellpadding="5" align="center">
+        <tr>
+            <td>
+                <h2 align="center"><a href="/">Provincias</a> / {{ prov_nombre['nombre'] }}</h2>
+                <p align="center">Bienvenidos a la consulta de cantones.</p>
+                <p align="center">Estos son los cantones de la provincia de {{ prov_nombre['nombre'] }}:</p>
+                <table align="center" border="1" cellpadding="5">
+                    <tr><td>Código</td><td>Nombre</td></tr>
+                    {% for dict in data %}
+                    <tr><td align="center">{{ dict['codigo'] }}</td><td>{{ dict['nombre'] }}</td><td><a href="/distritos?provincia={{ prov_ref }}&canton={{ dict['codigo'] }}"><button>Ver distritos</button></a></td></tr>
+                    {% endfor %}
+                </table>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

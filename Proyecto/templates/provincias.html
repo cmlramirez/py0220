@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block title %}Consulta de provincias, cantones y distritos{% endblock %}
+{% block content %}
+    <table cellpadding="5" align="center">
+        <tr>
+            <td>
+                <h2 align="center">Bienvenidos a la consulta de provincias, cantones y distritos.</h2>
+                <p align="center">Por favor seleccione la provincia que desea consultar:</p>
+                <table align="center" border="1" cellpadding="5">
+                    <tr><td>Código</td><td>Nombre</td></tr>
+                    {% for dict in data %}
+                    <tr><td align="center">{{ dict['codigo'] }}</td><td>{{ dict['nombre'] }}</td><td><a href="/cantones?provincia={{ dict['codigo'] }}"><button size="3">Ver cantones</button></a></td></tr>
+                    {% endfor %}
+                </table>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

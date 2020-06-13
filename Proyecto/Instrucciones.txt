@@ -1,0 +1,6 @@
+1. Descargar todo el contenido de la carpeta Proyecto.
+2. Agregar los datos del host y la clave para la conexión en la base de datos en el archivo ./api/padronapi.ini.
+3. Ejecutar el API en la ubicación ./api/api.py.
+4. Ejecutar el servicio del cliente en la ubicación ./app.py.
+5. Abrir en el navegador la dirección http://127.0.0.1:8000/.
+6. Enjoy!
